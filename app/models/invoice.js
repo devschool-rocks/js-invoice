@@ -1,6 +1,6 @@
 var db       = require('../services/db');
 var Customer = require('./customer');
-var Admin    = require('./admin');
+var Admin = require('./admin');
 
 module.exports = db.Model.extend({
   tableName: 'invoices',

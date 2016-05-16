@@ -1,0 +1,15 @@
+extends ../layout.pug
+
+block content
+  h1 Create New Invoice
+  form(action="/invoices", method="post")
+    div.input
+      span.label Customer
+      select(name="customer_id")
+        each customer in customers
+          option(value=customer.id)= customer.name
+    div.input
+      span.label Amount
+      input(type="text", name="amount")
+    div.actions
+      input(type="submit", value="Create new invoice")
